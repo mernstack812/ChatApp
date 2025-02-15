@@ -1,9 +1,7 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
-import Left from "./home/Left Part/left";
-import Right from "./home/Right Part/right";
+import Left from "./home/Left Part/Left"
+import Right from "./home/Right Part/Right";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import { useAuth } from "./context/AuthProvider";
