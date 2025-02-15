@@ -11,7 +11,7 @@ const Logout = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:4000/user/logout");
+      const res = await axios.post("https://chatapp-pd49.onrender.com/user/logout");
       localStorage.removeItem("ChatApp");
       Cookies.remove("jwt");
       setLoading(false);

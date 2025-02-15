@@ -14,7 +14,7 @@ function useGetAllUsers() {
       
       try {
         const response = await axios.get(
-          "http://localhost:4000/user/allUsers",
+          "https://chatapp-pd49.onrender.com/user/allUsers",
           {
             headers: {
               Authorization: `${localData.token}`, // Adjust token type if needed

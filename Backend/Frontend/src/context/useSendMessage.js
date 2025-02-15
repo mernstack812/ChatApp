@@ -17,7 +17,7 @@ const useSendMessage = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:4000/message/send/${selectConversation._id}`,
+        `https://chatapp-pd49.onrender.com/message/send/${selectConversation._id}`,
         data,
         {
           headers: {

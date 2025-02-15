@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173", // Frontend ka URL
+    origin: "https://chatapp-pd49.onrender.com", // Frontend ka URL
     credentials: true, // Cookies allow karega
   })
 );

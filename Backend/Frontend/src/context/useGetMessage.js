@@ -15,7 +15,7 @@ const useGetMessage = () => {
       if (selectConversation && selectConversation._id) {
         try {
           const res = await axios.get(
-            `http://localhost:4000/message/get/${selectConversation._id}`,
+            `https://chatapp-pd49.onrender.com/message/get/${selectConversation._id}`,
             {
               headers: {
                 Authorization: `${localData.token}`, // Adjust token type if needed

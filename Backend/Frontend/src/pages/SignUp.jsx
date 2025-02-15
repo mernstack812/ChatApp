@@ -34,7 +34,7 @@ const SignUp = () => {
     console.log(userInfo);
 
     await axios
-      .post("http://localhost:4000/user/signup", userInfo, {
+      .post("https://chatapp-pd49.onrender.com/user/signup", userInfo, {
         withCredentials: true,
       })
       .then((response) => {
