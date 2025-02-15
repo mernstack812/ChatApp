@@ -6,7 +6,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import messageRoutes from "./routes/messageRoute.js";
 import { app, server } from "./socket/server.js";
-
+import path from "path";
 
 dotenv.config();
 
@@ -22,6 +22,15 @@ app.use(
 //routes
 app.use("/user", userRoutes);
 app.use("/message", messageRoutes);
+
+//--------------- code for deployment --------------------
+if (process.env.NODE_ENV === "production") {
+  const dirPath = path.resolve();
+  app.use(express.static("./Frontend/dist"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(dirPath, "./Frontend/dist", "index.html"));
+  });
+}
 
 try {
   await mongoose.connect(process.env.MONGO_URL);

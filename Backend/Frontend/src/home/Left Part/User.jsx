@@ -1,7 +1,7 @@
 import React from "react";
 import useConversation from "../../zustand/useConversation";
 import { useSocketContext } from "../../context/SocketContext";
-import profile from "../../../public/user.jpg";
+import profile from "../../assets/user.jpg";
 
 const User = ({ user }) => {
   const { selectConversation, setselectConversation } = useConversation();

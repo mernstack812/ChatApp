@@ -5,9 +5,6 @@ export const createTokenAndSaveCookie = (userId, res) => {
     expiresIn: "10d",
   });
 
-  console.log("mtoken name :" + token);
-  console.log("mresponse : " + res);
-
   res.cookie("jwt", token, {
     httpOnly: true,
   });

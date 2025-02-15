@@ -13,7 +13,7 @@ export const sendMessage = async (req, res) => {
     });
 
     if (!conversation) {
-      await conversationModel.create({
+      conversation = await conversationModel.create({
         members: [senderId, recieverId],
       });
     }
