@@ -17,7 +17,7 @@ export const SocketProvider = ({ children }) => {
     console.log(authUser);
 
     if (authUser) {
-      const socket = io("http://localhost:4000", {
+      const socket = io("https://chatapp-pd49.onrender.com", {
         query: {
           userId: authUser.user._id,
         },
